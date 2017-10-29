@@ -1,0 +1,16 @@
+typedef struct Lnode{
+  int data[MAXSIZE];
+  int length;
+}
+Lnode *List;
+
+int (List L,int K){
+  int left=1,right=L->length;
+  while(left<=right){
+  mid=(left+right)/2;
+  if(K<L->[mid]) right=mid;
+  else if(K>L->data[mid])  left=mid+1;
+  else return mid;
+  }
+  return NULL;
+}
